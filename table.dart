@@ -1,6 +1,5 @@
 import 'dart:collection';
 import 'dart:convert';
-import 'value.dart';
 
 /// A table.
 class Table {
@@ -30,7 +29,8 @@ class Table {
       for (var a in this.attributes) {
         if (parsedJSON.containsKey(a)) {
           String mapKey = "$id-$a"; // id plus attribute name.
-          values[mapKey] = new Value(id, a.toString(), parsedJSON[a]);
+          // values[mapKey] = new Value(id, a.toString(), parsedJSON[a]).value;
+          values[mapKey] = parsedJSON[a];
         }
       } // Next attribute in row.
     } // Next row.

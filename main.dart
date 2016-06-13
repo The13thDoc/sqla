@@ -1,15 +1,24 @@
 import 'mainTest.dart';
+import 'testSqlaParser.dart';
 
 /// Start application.
 void main() {
-  print('Start...');
+  print('main()');
 
   new MainTest()
-    ..createTable()
-    ..insertData()
-    ..printTableInfo()
-    ..printTable()
+    // ..createTable()
+    // ..insertData()
+    // ..printTableInfo()
+    // ..printTable()
     ;
 
-  print('Done.');
+  new TestSqlaParser()
+  ..readFile()
+  // ..printFileContents()
+  ..parseSqla()
+  ..printFromList()
+  ..printSelectList()
+  ;
+
+  print('main() Done.');
 }

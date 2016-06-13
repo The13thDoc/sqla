@@ -1,0 +1,9 @@
+query {
+    from {
+        tableA
+    }
+    select {
+        column1
+        column2
+    }
+}
